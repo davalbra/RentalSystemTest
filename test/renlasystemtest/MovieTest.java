@@ -72,6 +72,10 @@ public class MovieTest {
         int arg = Movie.NEW_RELEASE;
         instance.setPriceCode(arg);
         assertEquals(arg, instance.getPriceCode());
+        
+        int arg2 = Movie.REGULAR;
+        instance.setPriceCode(arg2);
+        assertEquals(arg2, instance.getPriceCode());
 
     }
 

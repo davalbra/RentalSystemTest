@@ -43,11 +43,10 @@ public class CustomerTest {
     @Test
     public void testAddMovieRental() {
         System.out.println("addMovieRental");
-        MovieRental arg = null;
-        Customer instance = null;
+        MovieRental arg = new MovieRental(new Movie("los piratas", Movie.CHILDRENS),5);
+        Customer instance = new Customer("pepe");
         instance.addMovieRental(arg);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(arg,instance.getMovieRentals().get(0));
     }
 
     /**
@@ -56,11 +55,11 @@ public class CustomerTest {
     @Test
     public void testAddVideoGameRental() {
         System.out.println("addVideoGameRental");
-        VideoGameRental arg = null;
-        Customer instance = null;
+        VideoGameRental arg = new VideoGameRental(new Ps3Game("FiFA"), 10, true);
+        Customer instance =  new Customer("pepe");
         instance.addVideoGameRental(arg);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(arg,instance.getVideoGameRental().get(0));
     }
 
     /**
@@ -69,7 +68,8 @@ public class CustomerTest {
     @Test
     public void testStatement() {
         System.out.println("statement");
-        Customer instance = null;
+        Customer instance = new Customer("YONkANI");
+        instance.addMovieRental(new MovieRental(new Movie("Piratas", Movie.REGULAR), 2));
         String expResult = "";
         String result = instance.statement();
         assertEquals(expResult, result);

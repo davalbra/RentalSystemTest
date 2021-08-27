@@ -5,8 +5,11 @@ import java.util.*;
 class Customer {
 
     public String _name;
+    
     private final ArrayList<MovieRental> _movieRentals;
     private final ArrayList<VideoGameRental> _videoGameRental; 
+    
+    
     public Customer(String name) {
         this._videoGameRental = new ArrayList<>();
         this._movieRentals = new ArrayList<>();
@@ -78,4 +81,18 @@ class Customer {
                 + " frequent renter points";
         return result;
     }
+
+    public String getName() {
+        return _name;
+    }
+
+    public ArrayList<MovieRental> getMovieRentals() {
+        return _movieRentals;
+    }
+
+    public ArrayList<VideoGameRental> getVideoGameRental() {
+        return _videoGameRental;
+    }
+    
+    
 }
