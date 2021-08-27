@@ -68,13 +68,15 @@ public class CustomerTest {
     @Test
     public void testStatement() {
         System.out.println("statement");
-        Customer instance = new Customer("YONkANI");
-        instance.addMovieRental(new MovieRental(new Movie("Piratas", Movie.REGULAR), 2));
-        String expResult = "";
+        Customer instance = new Customer("David");
+        instance.addMovieRental(new MovieRental(new Movie("pirta", Movie.REGULAR), 3));
+        instance.addVideoGameRental(new VideoGameRental(new Ps3Game("FiFA"), 4, true));
+        String expResult ="Rental Record for David\n" +"\tpirta	3.5\n" +"\tFiFA	37.989999999999995\n" +"Amount owed is 41.489999999999995\n" +
+"You earned 3 frequent renter points";
         String result = instance.statement();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
     
 }

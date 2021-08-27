@@ -17,13 +17,7 @@ public class prueba {
     public static void main(String[] args) {
         Customer cus = new Customer("David");
         cus.addMovieRental(new MovieRental(new Movie("pirta", Movie.REGULAR), 3));
-        cus.addMovieRental(new MovieRental(new Movie("pirta", Movie.CHILDRENS), 3));
-        cus.addMovieRental(new MovieRental(new Movie("pirta", Movie.NEW_RELEASE), 3));
-        cus.addMovieRental(new MovieRental(new Movie("pirta", Movie.REGULAR), 3));
         cus.addVideoGameRental(new VideoGameRental(new Ps3Game("FiFA"), 4, true));
-        cus.addVideoGameRental(new VideoGameRental(new Ps3Game("FiFA"), 1, true));
-        cus.addVideoGameRental(new VideoGameRental(new Ps3Game("FiFA"), 2, true));
-        cus.addVideoGameRental(new VideoGameRental(new Ps3Game("FiFA"), 6, true));
         System.out.println(cus.statement());
     }
     
